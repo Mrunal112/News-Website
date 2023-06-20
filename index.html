@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stark News</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b8bed4b29e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <a class="company-logo" href="#" onclick='reload()'>
+                <img src="assets/Logo.png" alt="Company Logo">
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-links nav-item" id="technology" onclick="onNavItemClick('technology')">Technology</li>
+                    <li class="hover-links nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                    <li class="hover-links nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="e.g. Science">
+                <button class="search-button" id="search-button" onclick='search()'>Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+    </main>
+
+    <div class="container">
+        <footer class="">
+            <hr class="line">
+            <span>&copy; 2023, <a href="#" onclick='reload()'>Stark News</a>, All Rights Reserved</span>
+            <a href="https://twitter.com/MrunalMunjamka1" class="twitter" target="_blank"><i class="fa-brands fa-twitter  fa-xl" style="color: #000000;"></i></a>
+            <a href="https://www.instagram.com/__mrunal___/" class="instagram" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #000000;"></i></a>
+        </footer>
+    </div>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="http://via.placeholder.com/400x200" alt="news-img" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet est
+                    magnam molestiae velit ipsum temporibus magni rem alias, dicta repellat.</p>
+            </div>
+        </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
